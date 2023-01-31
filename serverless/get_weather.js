@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
     const weatherJson = await weatherStream.json();
     return {
       statusCode: 200,
-      body: JSON.stringify(weatherJson),
+      body: JSON.stringify(weatherJson)
     };
   } catch (err) {
     return { statusCode: 422, body: err.stack };
