@@ -1,0 +1,11 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "website showing weather to the user using open weather api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
