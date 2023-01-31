@@ -10,8 +10,8 @@ import {
 import {
   setLocationObject,
   getHomeLocation,
-  getWetherFromCoords,
-  getCoordsFormApi,
+  getWeatherFromCoords,
+  getCoordsFromApi,
   cleanText,
 } from "./dataFunction.js";
 
@@ -133,7 +133,7 @@ const submitNewLocation = async (e) => {
   if (!entryText.length) return;
   const locationIcon = document.querySelector(".fa-magnifying-glass");
   addSpinner(locationIcon);
-  const coordsData = await getCoordsFormApi(entryText, currentLoc.getUnit());
+  const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
   if (coordsData) {
     if (coordsData.cod === 200) {
       const myCoordsObj = {
@@ -154,6 +154,6 @@ const submitNewLocation = async (e) => {
 };
 
 const updateDataAndDisplay = async (locationObj) => {
-  const weatherJson = await getWetherFromCoords(locationObj);
+  const weatherJson = await getWeatherFromCoords(locationObj);
   if (weatherJson) {updateDisplay(weatherJson, locationObj)};
 };
