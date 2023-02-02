@@ -14,12 +14,12 @@ export async function handler(event, context) {
     const jsonData = await dataStream.json();
     return {
       statusCode: 200,
-      body: JSON.stringify(jsonData)
+      body: JSON.stringify(jsonData),
     };
   } catch (err) {
     return {
       statusCode: 422,
-      body: err.stack
+      body: err.stack,
     };
   }
 }

@@ -5,7 +5,7 @@ import {
   displayError,
   displayApiError,
   updateScreenReaderConfirmation,
-  updateDisplay
+  updateDisplay,
 } from "./domFunctions.js";
 import {
   setLocationObject,
@@ -155,5 +155,7 @@ const submitNewLocation = async (e) => {
 
 const updateDataAndDisplay = async (locationObj) => {
   const weatherJson = await getWeatherFromCoords(locationObj);
-  if (weatherJson) {updateDisplay(weatherJson, locationObj)};
+  if (weatherJson) {
+    updateDisplay(weatherJson, locationObj);
+  }
 };
