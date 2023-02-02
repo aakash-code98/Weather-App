@@ -2,3 +2,6 @@
   publish = "dist/"
 
   functions = "serverless/"
+
+[functions]
+  node_bundler = "esbuild"
