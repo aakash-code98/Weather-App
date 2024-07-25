@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const { WEATHER_API_KEY } = process.env;
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 
 export async function handler(event, context) {
   const params = JSON.parse(event.body);
